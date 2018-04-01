@@ -1,3 +1,4 @@
+
 # Navigation Activity
 
 ``` what to do ```
@@ -12,4 +13,8 @@
 1. Mostafa Mohamed
 2. Khhhhald Mohamed
 3. Ali Maher
+
+# Gamers Hub
+
+An Application made to connect gamers when they want to search for players with defined specifications.
 
