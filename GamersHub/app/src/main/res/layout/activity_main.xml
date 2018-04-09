@@ -7,15 +7,8 @@
     tools:context="com.androidexample.gamershub.MainActivity"
     android:orientation="vertical">
 
-    <android.support.design.widget.TabLayout
-        android:id="@+id/tab"
-        android:layout_width="match_parent"
-        android:layout_height="72dp"
-        style="@style/NavigationTab"/>
-
-    <android.support.v4.view.ViewPager
-        android:id="@+id/viewpager"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+    <android.support.design.internal.BottomNavigationVie
+        android:layout_width=""
+        android:layout_height=""></android.support.design.internal.BottomNavigationVie>
 
 </LinearLayout>
