@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="nav_icon">24dp</dimen>
+    <dimen name="nav_height">72dp</dimen>
+    <dimen name="nav_icon_padding_bottom">10dp</dimen>
+    <dimen name="nav_padding_under_text">16dp</dimen>
+</resources>
