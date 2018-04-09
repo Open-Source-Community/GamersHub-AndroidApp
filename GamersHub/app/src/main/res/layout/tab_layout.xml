@@ -5,16 +5,18 @@
     android:layout_height="wrap_content"
     android:gravity="center"
     android:orientation="vertical">
+
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingBottom="@dimen/nav_icon_padding_bottom"
-        android:id="@+id/tab_icon"/>
+        android:id="@+id/tab_icon" />
+
     <TextView
         android:id="@+id/tab_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingBottom="@dimen/nav_padding_under_text"
-        android:textAppearance="@style/CategoryTabTextAppearance"/>
+        android:textAppearance="@style/CategoryTabTextAppearance" />
 
 </LinearLayout>

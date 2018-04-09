@@ -18,6 +18,11 @@ public class ChatFragment extends Fragment {
         // Required empty public constructor
     }
 
+    public static ChatFragment newInstance() {
+        ChatFragment fragment = new ChatFragment();
+        return fragment;
+    }
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

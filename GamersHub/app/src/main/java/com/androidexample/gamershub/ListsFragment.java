@@ -11,11 +11,15 @@ import android.widget.TextView;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class ListFragment extends Fragment {
+public class ListsFragment extends Fragment {
 
 
-    public ListFragment() {
+    public ListsFragment() {
         // Required empty public constructor
+    }
+    public static ListsFragment newInstance() {
+        ListsFragment fragment = new ListsFragment();
+        return fragment;
     }
 
 
