@@ -16,8 +16,8 @@ import java.util.List;
  * Created by ali on 4/4/18.
  */
 
-public class CategoryAdapter extends FragmentPagerAdapter {
-    private ArrayList<Fragment> pageFragments=new ArrayList<>();
+public class CategoryAdapter extends FragmentStatePagerAdapter {
+    public ArrayList<Fragment> pageFragments=new ArrayList<>();
     private List<Integer> navIcons= new ArrayList<>();
     private List<Integer> navStrings= new ArrayList<>();
     private Context contxt;

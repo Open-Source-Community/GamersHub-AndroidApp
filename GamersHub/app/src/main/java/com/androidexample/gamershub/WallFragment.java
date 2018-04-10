@@ -6,15 +6,16 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class SettingsFragment extends Fragment {
+public class WallFragment extends Fragment {
 
 
-    public SettingsFragment() {
+    public WallFragment() {
         // Required empty public constructor
     }
 
@@ -24,9 +25,10 @@ public class SettingsFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.abohosaam,container,false);
         TextView view = (TextView) rootView.findViewById(R.id.textt);
-        view.setText("Setting");
+        ImageView image=(ImageView)rootView.findViewById(R.id.disImage);
+        image.setImageResource(R.drawable.ic_home_white_24dp);
+        view.setText("Home");
         return rootView;
-
     }
 
 }

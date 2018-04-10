@@ -6,7 +6,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.androidexample.gamershub.MainActivity">
+    tools:context="com.androidexample.gamershub.MainActivity"
+    android:background="@color/colorPrimaryDark">
     >
     <FrameLayout
         android:id="@+id/frame_layout"
@@ -21,7 +22,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="@color/white"
+        android:background="@color/colorPrimary"
         app:itemIconTint="@color/nav_item_state_list"
         app:itemTextColor="@color/nav_item_state_list"
         app:menu="@menu/menu_navigation"/>
