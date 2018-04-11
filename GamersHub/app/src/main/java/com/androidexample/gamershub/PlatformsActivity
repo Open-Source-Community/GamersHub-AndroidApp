@@ -1,0 +1,36 @@
+package com.androidexample.gamerhub
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+
+public class PlatformsActivity extends AppCompatActivity {
+    RecyclerView recyclerView;
+    RecyclerView.LayoutManager layoutManager;
+    RecyclerView.Adapter adapter;
+    String []platformsnames;
+    int [] platformsImages;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.platforms_activity);
+        platformsnames=new String[]{"PC", "PlayStation 3", "PlayStation 4", "XBOX 360", "XBOX ONE", "Nintendo", "wii"};
+        platformsImages=new int[]{R.drawable.mouse,
+                R.drawable.playstation3,
+                R.drawable.playstation4,
+                R.drawable.xbox360,
+                R.drawable.xboxone,
+                R.drawable.nintendo,
+                R.drawable.wii};
+        recyclerView =(RecyclerView)findViewById(R.id.recycler_view);
+        layoutManager = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(layoutManager);
+        adapter = new PlatformsRecyclerAdapter(platformsnames,platformsImages);
+        recyclerView.setAdapter(adapter);
+
+        }
+
+
+
+
+}
