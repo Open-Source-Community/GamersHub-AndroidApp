@@ -1,0 +1,124 @@
+package com.androidexample.gamershub;
+
+
+import android.support.design.widget.Snackbar;
+
+import android.support.v7.widget.RecyclerView;
+
+import android.view.LayoutInflater;
+
+import android.view.View;
+
+import android.view.ViewGroup;
+
+import android.widget.ImageView;
+
+import android.widget.TextView;
+
+
+public class PlatformsRecyclerAdapter extends RecyclerView.Adapter<PlatformsRecyclerAdapter.ViewHolder> {
+
+    
+private String[] PlatFormsName ;
+
+    
+private int[] PlatFormsImages ;
+
+    
+public PlatformsRecyclerAdapter(String[] platFormsName, int[] platFormsImages) {
+        
+PlatFormsName = platFormsName;
+        
+PlatFormsImages = platFormsImages;
+    
+}
+
+    
+class ViewHolder extends RecyclerView.ViewHolder{
+        
+public ImageView platformImage;
+        
+public ImageView Checkedimage;
+        
+public TextView platformname;
+
+        
+public ViewHolder(final View itemView) {
+            
+super(itemView);
+            
+platformImage = (ImageView)itemView.findViewById(R.id.imageview);
+            
+Checkedimage=(ImageView)itemView.findViewById(R.id.checkedimage);
+            
+platformname = (TextView)itemView.findViewById(R.id.item_title);
+            
+itemView.setOnClickListener(new View.OnClickListener() {
+                
+@Override 
+public void onClick(View v) {
+
+                    
+if(Checkedimage.getVisibility()!=View.VISIBLE){
+                    
+Checkedimage.setVisibility(View.VISIBLE);
+                    
+Snackbar.make(v,   platformname.getText().toString()+" is chosen ",
+Snackbar.LENGTH_LONG)
+.setAction("Action", null).show();
+}
+                    
+else{
+                        
+Checkedimage.setVisibility(View.INVISIBLE);
+                        
+Snackbar.make(v,platformname.getText().toString()+" is cancelled " ,
+Snackbar.LENGTH_LONG)
+.setAction("Action", null).show();
+                    
+}
+
+                
+}
+            
+});
+        
+}
+    
+}
+
+    
+@Override
+    
+public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
+        
+View v = LayoutInflater.from(viewGroup.getContext())
+.inflate(R.layout.platformslist_layout, viewGroup, false);
+        
+ViewHolder viewHolder = new ViewHolder(v);
+        
+return viewHolder;
+    
+}
+
+    
+@Override
+    
+public void onBindViewHolder(ViewHolder viewHolder, int i) {
+        
+viewHolder.platformname.setText(PlatFormsName[i]);
+        
+viewHolder.platformImage.setImageResource(PlatFormsImages[i]);
+    
+}
+
+    
+@Override
+    
+public int getItemCount() {
+        
+return PlatFormsName.length;
+    
+}
+
+}
